@@ -1,7 +1,10 @@
 import argon2 from "argon2";
-import { createUserDTO, User } from "src/entities";
 
-import prisma from "src/lib/prisma";
+
+import prisma from "../../lib/prisma";
+
+import { createUserDTO } from "src/entities/user/user.dto";
+import { User } from "src/entities/user/user";
 
 
 type RegisterNewUserParams = {

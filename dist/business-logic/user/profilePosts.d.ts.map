@@ -1,0 +1,1 @@
+{"version":3,"file":"profilePosts.d.ts","sourceRoot":"","sources":["../../../src/business-logic/user/profilePosts.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,IAAI,EAAE,MAAM,gBAAgB,CAAC;AAGtC,eAAO,MAAM,YAAY,GAAU,IAAI,MAAM,GAAG,SAAS,KAAG,OAAO,CAC/D;IACI,SAAS,EAAE,IAAI,EAAE,CAAC;IAClB,UAAU,EAAE,IAAI,EAAE,CAAA;CACrB,CAiCJ,CAAC"}

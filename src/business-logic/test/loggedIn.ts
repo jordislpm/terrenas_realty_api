@@ -1,7 +1,6 @@
 
 import jwt, { JwtPayload, VerifyErrors } from "jsonwebtoken";
 import dotenv from "dotenv";
-import { ShouldBeAdmin } from "src/entities";
 import { Request, Response } from "express";
 
 dotenv.config();

@@ -1,0 +1,1 @@
+{"version":3,"file":"getOnePost.d.ts","sourceRoot":"","sources":["../../../src/business-logic/post/getOnePost.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,IAAI,EAAE,MAAM,cAAc,CAAC;AAGpC,KAAK,gBAAgB,GAAG;IACxB,EAAE,EAAE,MAAM,GAAG,SAAS,CAAC;IACvB,KAAK,EAAE,MAAM,GAAG,SAAS,CAAC;CACzB,CAAC;AAEF,eAAO,MAAM,UAAU,GAAU,eAAY,gBAAgB,KAAG,OAAO,CAAC,IAAI,CA0D3E,CAAC"}

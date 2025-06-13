@@ -1,6 +1,7 @@
 import argon2 from "argon2";
-import prisma from "src/lib/prisma";
-import {updateUserDTO, User } from "src/entities";
+import prisma from "../../lib/prisma";
+import { User } from "src/entities/user/user";
+
 
 
 

@@ -1,7 +1,9 @@
-import prisma from "src/lib/prisma";
+import { updatePostDTO } from "src/entities/post/post";
+import prisma from "../../lib/prisma";
 import argon2 from "argon2";
+import { Post } from "src/entities/post/post/post";
 
-import { Post, updatePostDTO, updateUserDTO } from "src/entities";
+
 
 
 type UpdateOnePostParams = {

@@ -1,0 +1,1 @@
+{"version":3,"file":"deleteOnePost.d.ts","sourceRoot":"","sources":["../../../src/business-logic/post/deleteOnePost.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,IAAI,EAAE,MAAM,6BAA6B,CAAC;AAGnD,KAAK,mBAAmB,GAAG;IACxB,MAAM,EAAE,MAAM,CAAC;IACf,WAAW,EAAE,MAAM,CAAC;CACtB,CAAC;AAGF,eAAO,MAAM,aAAa,GAAU,yBAAsB,mBAAmB,KAAG,OAAO,CAAC,IAAI,CA+B3F,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"getAllChats.d.ts","sourceRoot":"","sources":["../../../src/business-logic/chat/getAllChats.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,IAAI,EAAE,MAAM,6BAA6B,CAAC;AAKnD,KAAK,iBAAiB,GAAG;IACrB,WAAW,EAAE,MAAM,CAAA;CACtB,CAAC;AAGF,eAAO,MAAM,WAAW,GAAU,iBAAiB,iBAAiB,KAAG,OAAO,CAAC,IAAI,EAAE,CAoCpF,CAAC"}

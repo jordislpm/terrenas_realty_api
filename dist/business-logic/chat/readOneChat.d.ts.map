@@ -1,0 +1,1 @@
+{"version":3,"file":"readOneChat.d.ts","sourceRoot":"","sources":["../../../src/business-logic/chat/readOneChat.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,IAAI,EAAE,MAAM,6BAA6B,CAAC;AAInD,KAAK,iBAAiB,GAAG;IACzB,WAAW,EAAE,MAAM,CAAC;IACpB,MAAM,EAAE,MAAM,CAAA;CACb,CAAC;AAGF,eAAO,MAAM,WAAW,GAAU,yBAAuB,iBAAiB,KAAG,OAAO,CAAC,IAAI,CA4BxF,CAAC"}

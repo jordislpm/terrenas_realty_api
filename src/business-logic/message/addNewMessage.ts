@@ -1,6 +1,7 @@
 import jwt, { JwtPayload } from "jsonwebtoken";
-import prisma from "src/lib/prisma";
-import { Chat, createMessageDTO, GetPostsQuery, Message, Post } from "src/entities";
+import prisma from "../../lib/prisma";
+import { Message } from "src/entities/chat/message/message";
+
 
 
 type AddNewMessageParams = {

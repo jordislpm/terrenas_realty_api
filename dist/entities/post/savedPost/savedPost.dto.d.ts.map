@@ -1,0 +1,1 @@
+{"version":3,"file":"savedPost.dto.d.ts","sourceRoot":"","sources":["../../../../src/entities/post/savedPost/savedPost.dto.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,aAAa,CAAC;AAGxC,MAAM,MAAM,YAAY,GAAG,IAAI,CAAC,SAAS,EAAE,IAAI,CAAC,CAAA;AAChD,MAAM,MAAM,cAAc,GAAG,OAAO,CAAC,SAAS,CAAC,CAAA"}

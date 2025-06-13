@@ -1,5 +1,5 @@
 import { createChatDTO } from './../../entities/chat/chat/chat.dto';
-import prisma from "src/lib/prisma";
+import prisma from "../../lib/prisma";
 
 import { AddChat, Chat} from "src/entities";
 

@@ -1,6 +1,4 @@
-import { SavedPost } from "src/entities";
-import prisma from "src/lib/prisma";
-import { User } from "src/entities";
+import prisma from "../../lib/prisma";
 import { Post } from "@prisma/client";
 
 

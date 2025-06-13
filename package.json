@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/server/index.js",
-  "type": "module",
   "scripts": {
     "dev": "tsx watch -r tsconfig-paths/register src/server/index.ts",
     "prepare": "pnpm add prisma @prisma/client && npx prisma generate",

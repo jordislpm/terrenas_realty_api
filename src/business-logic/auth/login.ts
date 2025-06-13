@@ -1,7 +1,7 @@
 import argon2 from "argon2";
 import { loginUserDTO, User } from "src/entities";
 import jwt from "jsonwebtoken";
-import prisma from "src/lib/prisma";
+import prisma from "../../lib/prisma";
 import dotenv from 'dotenv';
 
 type LoginUserParams = {

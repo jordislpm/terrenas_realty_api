@@ -1,7 +1,8 @@
-import prisma from "src/lib/prisma";
+import { updateUserDTO } from "src/entities/user/user.dto";
+import prisma from "../../lib/prisma";
 import argon2 from "argon2";
+import { User } from "src/entities/user/user";
 
-import { updateUserDTO, User } from "src/entities";
 
 
 type UpdateOneUserParams ={

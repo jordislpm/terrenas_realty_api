@@ -1,6 +1,6 @@
 import argon2 from "argon2";
-import prisma from "src/lib/prisma";
-import {Post,} from "src/entities";
+import prisma from "../../lib/prisma";
+import { Post } from "src/entities/post/post/post";
 
 
 type DeleteOnePostParams = {
