@@ -1,4 +1,4 @@
-import { SavedPost } from './../../../../client/src/types/types';
+import { SavedPost } from "src/entities";
 import prisma from "src/lib/prisma";
 import { User } from "src/entities";
 import { Post } from "@prisma/client";
