@@ -1,6 +1,7 @@
 import { Request, Response, Router } from "express";
-import { getAllPosts} from "src/business-logic";
-import { GetPostsQuery } from "src/entities";
+import { getAllPosts } from "src/business-logic/post/getAllPosts";
+import { GetPostsQuery } from "src/entities/post/query";
+
 
 
 const getPosts: Router = Router();

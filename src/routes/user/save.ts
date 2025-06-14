@@ -1,7 +1,7 @@
 import { Request, Response, Router } from "express";
+import { saveOnePost } from "src/business-logic/user/saveOnePost";
 import { verifyToken } from "src/middleware/verifyToken";
-import { createPostDTO } from "src/entities";
-import { saveOnePost } from "src/business-logic";
+
 
 
 const savePost: Router = Router();

@@ -1,11 +1,7 @@
-import { Message } from './../../entities/chat/message/message';
-import { createUserDTO, updateUserDTO, loginUserDTO } from "../../entities/user/user.dto";
-
 import { Request, Response, Router } from "express";
-import { userInfo } from "os";
-import { loginUser } from "src/business-logic/auth/login";
+import { updateOneUser } from "src/business-logic/user/updateOneUser";
 import { verifyToken } from "src/middleware/verifyToken";
-import { updateOneUser } from 'src/business-logic';
+
 
 const updateUser: Router = Router();
 

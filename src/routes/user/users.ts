@@ -1,5 +1,6 @@
 import { Request, Response, Router } from "express";
-import { getAllUsers } from "src/business-logic";
+import { getAllUsers } from "src/business-logic/user/getAllUsers";
+
 
 
 const getUsers: Router = Router();

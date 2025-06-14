@@ -1,4 +1,4 @@
-import { PostDetail } from '../postDetail';
+import { PostDetail } from 'src/entities/post/postDetail/postDetatil';
 import { Post } from './post';
 
 

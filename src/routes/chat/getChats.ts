@@ -1,7 +1,8 @@
 import { Request, Response, Router } from "express";
+import { getAllchats } from "src/business-logic/chat/getAllChats";
 import { verifyToken } from "src/middleware/verifyToken";
-import { createNewPost, getAllchats, updateOnePost} from 'src/business-logic';
-import { createPostDTO } from "src/entities";
+
+
 
 const getChats: Router = Router();
 

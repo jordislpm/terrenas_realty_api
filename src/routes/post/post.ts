@@ -1,6 +1,7 @@
 
 import { Request, Response, Router } from "express";
-import { getOnePost} from "src/business-logic";
+import { getOnePost } from "src/business-logic/post/getOnePost";
+// import { getOnePost} from "src/business-logic";
 import { verifyToken } from "src/middleware/verifyToken";
 
 

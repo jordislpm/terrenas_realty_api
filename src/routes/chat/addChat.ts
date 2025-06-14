@@ -1,6 +1,7 @@
 import { Request, Response, Router } from "express";
+import { addOneChat } from "src/business-logic/chat/addOneChat";
 import { verifyToken } from "src/middleware/verifyToken";
-import { addOneChat } from 'src/business-logic';
+
 
 const addChat: Router = Router();
 

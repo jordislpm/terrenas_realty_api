@@ -1,4 +1,5 @@
-import { Chat } from "../chat";
+import { Chat } from "src/entities/chat/chat/chat";
+
 
 export interface Message {
   id: string;
