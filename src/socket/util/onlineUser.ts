@@ -1,4 +1,5 @@
-import { UserSocket } from "../types";
+import { UserSocket } from "../types/user";
+
 
 const onlineUsers = new Map<string, UserSocket>();
 
