@@ -21,7 +21,7 @@ routerLogin.post("/login", async (req: Request, res: Response) => {
     res
     .cookie("token", token,{
         httpOnly:true,
-        //secure:true  this line is mandatory in production
+        secure:true ,
         maxAge: age
     })
     .status(200)
