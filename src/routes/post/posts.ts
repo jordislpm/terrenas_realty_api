@@ -1,6 +1,6 @@
 import { Request, Response, Router } from "express";
-import { getAllPosts } from "src/business-logic/post/getAllPosts";
-import { GetPostsQuery } from "src/entities/post/query";
+import { GetPostsQuery } from "../../entities/post/query";
+import { getAllPosts } from "../../business-logic/post/getAllPosts";
 
 
 

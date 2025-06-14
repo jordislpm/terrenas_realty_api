@@ -1,6 +1,6 @@
 import { Request, Response, Router } from "express";
-import { addNewMessage } from "src/business-logic/message/addNewMessage";
-import { verifyToken } from "src/middleware/verifyToken";
+import { verifyToken } from "../../middleware/verifyToken";
+import { addNewMessage } from "../../business-logic/message/addNewMessage";
 
 
 const addMessage: Router = Router();

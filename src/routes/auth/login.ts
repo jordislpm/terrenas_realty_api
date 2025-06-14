@@ -1,8 +1,9 @@
 
 
 import { Request, Response, Router } from "express";
-import { loginUser } from "src/business-logic/auth/login";
-import { loginUserDTO } from "src/entities/user/user.dto";
+import { loginUser } from "../../business-logic/auth/login";
+import { loginUserDTO } from "../../entities/user/user.dto";
+
 
 
 const routerLogin: Router = Router();

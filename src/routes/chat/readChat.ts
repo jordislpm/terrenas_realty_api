@@ -1,6 +1,7 @@
 import { Request, Response, Router } from "express";
-import { readOnechat } from "src/business-logic/chat/readOneChat";
-import { verifyToken } from "src/middleware/verifyToken";
+import { verifyToken } from "../../middleware/verifyToken";
+import { readOnechat } from "../../business-logic/chat/readOneChat";
+
 
 
 

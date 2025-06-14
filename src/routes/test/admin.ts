@@ -1,6 +1,7 @@
 
 import { Request, Response, Router } from "express";
-import { shouldBeAdmin } from "src/business-logic/test/admin";
+import { shouldBeAdmin } from "../../business-logic/test/admin";
+
 
 const routerAdmin: Router = Router();
 

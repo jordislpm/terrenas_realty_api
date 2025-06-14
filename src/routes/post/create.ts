@@ -1,7 +1,8 @@
 import { Request, Response, Router } from "express";
-import { createNewPost } from "src/business-logic/post/createNewPost";
-import { createPostDTO } from "src/entities/post/post/post.dto";
-import { verifyToken } from "src/middleware/verifyToken";
+import { verifyToken } from "../../middleware/verifyToken";
+import { createPostDTO } from "../../entities/post/post/post.dto";
+import { createNewPost } from "../../business-logic/post/createNewPost";
+
 
 
 const createPost: Router = Router();

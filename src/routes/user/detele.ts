@@ -1,8 +1,8 @@
 
 import { Request, Response, Router } from "express";
-import { deleteOneUser } from "src/business-logic/user/deleteOneUser";
+import { verifyToken } from "../../middleware/verifyToken";
+import { deleteOneUser } from "../../business-logic/user/deleteOneUser";
 
-import { verifyToken } from "src/middleware/verifyToken";
 
 const deleteUser: Router = Router();
 

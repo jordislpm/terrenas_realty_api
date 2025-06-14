@@ -1,7 +1,7 @@
 import { Request, Response, Router } from "express";
-import { shouldBeAdmin } from "src/business-logic/test/admin";
-import { shouldBeLoggedIn } from "src/business-logic/test/loggedIn";
-import { verifyToken } from "src/middleware/verifyToken";
+import { verifyToken } from "../../middleware/verifyToken";
+import { shouldBeLoggedIn } from "../../business-logic/test/loggedIn";
+
 
 const routerLogged: Router = Router();
 

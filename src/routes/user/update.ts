@@ -1,6 +1,7 @@
 import { Request, Response, Router } from "express";
-import { updateOneUser } from "src/business-logic/user/updateOneUser";
-import { verifyToken } from "src/middleware/verifyToken";
+import { verifyToken } from "../../middleware/verifyToken";
+import { updateOneUser } from "../../business-logic/user/updateOneUser";
+
 
 
 const updateUser: Router = Router();

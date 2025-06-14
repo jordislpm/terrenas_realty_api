@@ -1,7 +1,7 @@
 import { Request, Response, Router } from "express";
-import { deleteOnePost } from "src/business-logic/post/deleteOnePost";
+import { verifyToken } from "../../middleware/verifyToken";
+import { deleteOnePost } from "../../business-logic/post/deleteOnePost";
 
-import { verifyToken } from "src/middleware/verifyToken";
 
 const deletePost: Router = Router();
 

@@ -1,7 +1,8 @@
 import { Request, Response, Router } from "express";
-import { updateOnePost } from "src/business-logic/post/updateOnePost";
-import { updatePostDTO } from "src/entities/post/post/post.dto";
-import { verifyToken } from "src/middleware/verifyToken";
+import { verifyToken } from "../../middleware/verifyToken";
+import { updatePostDTO } from "../../entities/post/post/post.dto";
+import { updateOnePost } from "../../business-logic/post/updateOnePost";
+
 
 
 const updatePost: Router = Router();

@@ -1,7 +1,8 @@
 
 import { Request, Response, Router } from "express";
-import { getAllNotifications } from "src/business-logic/user/getAllNotifications";
-import { verifyToken } from "src/middleware/verifyToken";
+import { verifyToken } from "../../middleware/verifyToken";
+import { getAllNotifications } from "../../business-logic/user/getAllNotifications";
+
 
 const getNotification: Router = Router();
 

@@ -1,6 +1,7 @@
 import { Request, Response, Router } from "express";
-import { getOneUser } from "src/business-logic/user/getOneUser";
-import { verifyToken } from "src/middleware/verifyToken";
+import { verifyToken } from "../../middleware/verifyToken";
+import { getOneUser } from "../../business-logic/user/getOneUser";
+
 
 const getUser: Router = Router();
 

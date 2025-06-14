@@ -1,6 +1,7 @@
 import { Request, Response, Router } from "express";
-import { profilePosts } from "src/business-logic/user/profilePosts";
-import { verifyToken } from "src/middleware/verifyToken";
+import { verifyToken } from "../../middleware/verifyToken";
+import { profilePosts } from "../../business-logic/user/profilePosts";
+
 
 const getUserPosts: Router = Router();
 

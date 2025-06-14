@@ -1,6 +1,7 @@
 import { Request, Response, Router } from "express";
-import { saveOnePost } from "src/business-logic/user/saveOnePost";
-import { verifyToken } from "src/middleware/verifyToken";
+import { verifyToken } from "../../middleware/verifyToken";
+import { saveOnePost } from "../../business-logic/user/saveOnePost";
+
 
 
 
