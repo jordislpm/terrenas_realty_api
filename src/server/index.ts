@@ -1,46 +1,61 @@
-// server.ts
 import express, { Request, Response, NextFunction } from "express";
+import http from "http";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import { Server } from "socket.io";
 import apiRoutes from "../routes";
-// importa otras dependencias según sea necesario
+import { registerSocketEvents } from "../socket/events/socketEvents";
 
-const PORT = process.env.API_PORT || 8000;
-const server = express();
 
-// Middleware para registrar las solicitudes entrantes
-server.use((req: Request, res: Response, next: NextFunction) => {
+const PORT = Number(process.env.API_PORT) || 8000;
+const clientUrl = process.env.CLIENT_URL || "http://localhost:3000";
+
+// Crear instancia de express
+const app = express();
+
+// Crear servidor HTTP a partir de Express
+const httpServer = http.createServer(app);
+
+// Crear instancia de Socket.IO y unirla al servidor HTTP
+const io = new Server(httpServer, {
+  cors: {
+    origin: clientUrl,
+    credentials: true,
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  },
+});
+
+// Registrar eventos de socket
+registerSocketEvents(io);
+
+// Middleware global de log
+app.use((req: Request, res: Response, next: NextFunction) => {
   console.log(`Solicitud recibida: ${req.method} ${req.url}`);
   next();
 });
 
-const clientUrl = process.env.CLIENT_URL;
-
 const corsOptions = {
   origin: clientUrl,
-  credentials: true
-  // origin: "http://localhost:5173/"
+  credentials: true,
 };
 
-server.use(cors(corsOptions));
-server.use(express.json());
-server.use(cookieParser())
+app.use(cors(corsOptions));
+app.use(express.json());
+app.use(cookieParser());
 
-server.use("/api", apiRoutes)
+app.use("/api", apiRoutes);
 
-// apiRoutes(server);
-
-// Middleware para manejar errores
-server.use((err: any, req: Request, res: Response, next: NextFunction) => {
+// Middleware de error
+app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   console.error(err);
-  res.status(500).json({ error: 'Error interno del servidor' });
+  res.status(500).json({ error: "Error interno del servidor" });
 });
 
-// Inicia el servidor
-server.listen(PORT, () => {
-  console.log("Servidor corriendo en el puerto " + PORT);
+// Iniciar el servidor HTTP (Express + Socket.IO)
+httpServer.listen(PORT, () => {
+  console.log(`🚀 Servidor Express+Socket.IO corriendo en el puerto ${PORT}`);
 });
-
 
 
 

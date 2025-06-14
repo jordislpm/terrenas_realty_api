@@ -32,6 +32,9 @@ importers:
       mongoose:
         specifier: ^8.4.2
         version: 8.15.1
+      socket:
+        specifier: ^1.0.0
+        version: 1.0.0
       socket.io:
         specifier: ^4.8.1
         version: 4.8.1
@@ -801,6 +804,11 @@ packages:
   socket.io@4.8.1:
     resolution: {integrity: sha512-oZ7iUCxph8WYRHHcjBEc9unw3adt5CmSNlppj/5Q4k2RIrhl8Z5yY2Xr4j9zj0+wzVZ0bxmYoGSzKJnRl6A4yg==}
     engines: {node: '>=10.2.0'}
+
+  socket@1.0.0:
+    resolution: {integrity: sha512-KsqkpkVsV/Yl9pfk1dOA1vmL4vauG50Ct6hP+C21FcY3zbw8Hky+DMyFRXW12QG1DCDxe31wtrdpZEljqGe2AQ==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   sparse-bitfield@3.0.3:
     resolution: {integrity: sha512-kvzhi7vqKTfkh0PZU+2D2PIllw2ymqJKujUcyPMd9Y75Nv4nPbGJZXNhxsgdQab2BmlDct1YnfQCguEvHr7VsQ==}
@@ -1616,6 +1624,8 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+
+  socket@1.0.0: {}
 
   sparse-bitfield@3.0.3:
     dependencies:
