@@ -1,6 +1,9 @@
 import jwt, { JwtPayload } from "jsonwebtoken";
 import prisma from "../../lib/prisma";
-import { GetPostsQuery, Post } from "src/entities";
+
+import { Post } from "src/entities/post/post/post";
+import { GetPostsQuery } from "src/entities/post/query/GetPostsQuery";
+
 
 
 type GetAllPostsParams = {

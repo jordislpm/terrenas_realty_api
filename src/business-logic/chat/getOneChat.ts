@@ -1,6 +1,7 @@
 import jwt, { JwtPayload } from "jsonwebtoken";
 import prisma from "../../lib/prisma";
-import { Chat, GetPostsQuery, Post } from "src/entities";
+import { Chat } from "src/entities/chat/chat/chat";
+
 
 
 type GetOneChatParams = {

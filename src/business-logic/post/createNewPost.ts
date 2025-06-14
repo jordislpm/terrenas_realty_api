@@ -1,4 +1,5 @@
-import { createPostDTO } from "src/entities/post/post";
+
+import { createPostDTO } from "src/entities/post/post/post.dto";
 import prisma from "../../lib/prisma";
 import { Post } from "src/entities/post/post/post";
 

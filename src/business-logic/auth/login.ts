@@ -1,8 +1,12 @@
 import argon2 from "argon2";
-import { loginUserDTO, User } from "src/entities";
+
 import jwt from "jsonwebtoken";
 import prisma from "../../lib/prisma";
 import dotenv from 'dotenv';
+import { loginUserDTO } from "src/entities/user/user.dto";
+import { User } from "src/entities/user/user";
+
+
 
 type LoginUserParams = {
 data: loginUserDTO;
@@ -11,7 +15,7 @@ data: loginUserDTO;
 type LoginUserReturn ={
  token: string, 
  age: number, 
- user:User 
+ user:User
 }
 
 export const loginUser = async ({data}:LoginUserParams): Promise<LoginUserReturn> => {

@@ -1,10 +1,5 @@
 
-import { createUserDTO, updateUserDTO, loginUserDTO } from "../../entities/user/user.dto";
-
 import { Request, Response, Router } from "express";
-import { userInfo } from "os";
-import { getOneUser } from "src/business-logic";
-import { loginUser } from "src/business-logic/auth/login";
 import { getAllNotifications } from "src/business-logic/user/getAllNotifications";
 import { verifyToken } from "src/middleware/verifyToken";
 

@@ -1,5 +1,6 @@
-import { User } from "src/entities/user";
-import { Message } from "../message";
+import { Message } from "src/entities/chat/message/message";
+import { User } from "src/entities/user/user";
+
 
 export interface Chat {
   id: string;

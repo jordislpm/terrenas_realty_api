@@ -1,6 +1,8 @@
-import { User } from "src/entities/user";
-import { PostDetail } from "../postDetail";
-import { SavedPost } from "../savedPost";
+
+import { PostDetail } from "src/entities/post/postDetail/postDetatil";
+import { SavedPost } from "src/entities/post/savedPost/savedPost";
+import { User } from "src/entities/user/user";
+
 
 export interface Post {
   id: string;

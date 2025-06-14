@@ -1,5 +1,5 @@
+import { User } from "src/entities/user/user";
 import prisma from "../../lib/prisma";
-import {User } from "src/entities";
 
 
 export const getAllUsers = async (): Promise<User[]> => {
