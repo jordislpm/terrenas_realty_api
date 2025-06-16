@@ -17,7 +17,6 @@ addChat.post("/", verifyToken, async (req: Request, res: Response) => {
             res.status(403).json({ Message: "Not Authorized" });
         } else {
             const newChat = await addOneChat({tokenUserId: tokenUserId, body: body})
-
             res.status(200).json(newChat);
         }
 
