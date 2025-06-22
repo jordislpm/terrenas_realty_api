@@ -8,7 +8,7 @@ import { registerSocketEvents } from "../socket/events/socketEvents";
 
 
 const PORT = Number(process.env.API_PORT) || 8000;
-const clientUrl = process.env.CLIENT_URL || "http://localhost:3000";
+const clientUrl = process.env.CLIENT_URL || "https://forty-teams-juggle.loca.lt";
 
 // Crear instancia de express
 const app = express();

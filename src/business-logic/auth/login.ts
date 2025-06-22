@@ -22,7 +22,7 @@ export const loginUser = async ({data}:LoginUserParams): Promise<LoginUserReturn
   const { username, password } = data;
   dotenv.config();
   const jwtSecret = process.env.JWT_SECRET_KEY;
-  const age = 1000 * 60 * 60 * 24 * 7;
+  const age = 1000 * 60 * 60 * 24 * 60;
 
   // Check if the JWT_SECRET is defined
   if (!jwtSecret) {
