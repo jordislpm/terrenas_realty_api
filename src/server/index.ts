@@ -6,57 +6,61 @@ import { Server } from "socket.io";
 import apiRoutes from "../routes";
 import { registerSocketEvents } from "../socket/events/socketEvents";
 
-
+// Environment
 const PORT = Number(process.env.API_PORT) || 8000;
-const clientUrl = process.env.CLIENT_URL || "https://forty-teams-juggle.loca.lt";
+const clientUrl = process.env.CLIENT_URL || "https://terrenas-realty.vercel.app";
 
-// Crear instancia de express
+// ✅ Allowed origins for CORS
+const allowedOrigins = [
+  clientUrl,
+  "http://localhost:3000",
+  "https://terrenas-realty.vercel.app",
+];
+
+// Create Express app and HTTP server
 const app = express();
-
-// Crear servidor HTTP a partir de Express
 const httpServer = http.createServer(app);
 
-// Crear instancia de Socket.IO y unirla al servidor HTTP
-const io = new Server(httpServer, {
-  cors: {
-    origin: clientUrl,
-    credentials: true,
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type"],
+// ✅ CORS options (used by both Express and Socket.IO)
+const corsOptions = {
+  origin: function (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
   },
-});
+  credentials: true,
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
 
-// Registrar eventos de socket
+// Socket.IO setup
+const io = new Server(httpServer, { cors: corsOptions });
 registerSocketEvents(io);
 
-// Middleware global de log
+// Global middleware
 app.use((req: Request, res: Response, next: NextFunction) => {
-  console.log(`Solicitud recibida: ${req.method} ${req.url}`);
+  console.log(`📡 ${req.method} ${req.url}`);
   next();
 });
-
-const corsOptions = {
-  origin: clientUrl,
-  credentials: true,
-};
 
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 
+// API routes
 app.use("/api", apiRoutes);
 
-// Middleware de error
+// Error handler
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
-  console.error(err);
-  res.status(500).json({ error: "Error interno del servidor" });
+  console.error("❌ Error:", err.message);
+  res.status(500).json({ error: "Internal server error" });
 });
 
-// Iniciar el servidor HTTP (Express + Socket.IO)
+// Start server
 httpServer.listen(PORT, () => {
-  console.log(`🚀 Servidor Express+Socket.IO corriendo en el puerto ${PORT}`);
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
-
-
 
 
