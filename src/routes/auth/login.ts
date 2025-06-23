@@ -21,8 +21,9 @@ routerLogin.post("/login", async (req: Request, res: Response) => {
         sameSite: "none",
         maxAge: age,
       })
+
       .status(200)
-      .json(userInfo);
+      .json({user:userInfo, token: token});
   } catch (error) {
     console.error("Error:", error);
     res
